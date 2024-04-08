@@ -1,0 +1,40 @@
+
+.page-header {
+    background-color: #007bff;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  .page-header h4 {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+
+  .newCourse-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 3rem;
+  }
+  
+  .course-section {
+    margin-top: 2rem;
+  }
+  
+  .course-section h5 {
+    text-align: center;
+  }
+  
+  .course-grid {
+    margin: 2rem 0;
+    min-height: 30vh;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+  }
+  
