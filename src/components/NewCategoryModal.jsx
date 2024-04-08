@@ -26,7 +26,7 @@ const NewCategoryModal = ({ onClose }) => {
     try {
       const userData = await JSON.parse(localStorage.getItem(process.env.USER_LOCALSTORAGE_KEY));
       const response = await axios.post(
-        "http://localhost:5000/api/course/category/createcategory",
+        "https://onelogica-backend.vercel.app/api/course/category/createcategory",
         {
           title,
           image,

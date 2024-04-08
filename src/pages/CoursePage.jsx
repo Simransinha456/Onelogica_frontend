@@ -18,7 +18,7 @@ const CoursesPage = () => {
   const getCourseData = async (updatedCategory, currentUser) => {
     if (updatedCategory) {
       axios
-        .get(`http://localhost:5000/api/course/thisgetcourses`, {
+        .get(`https://onelogica-backend.vercel.app/api/course/thisgetcourses`, {
           headers: { Authorization: `Bearer ${currentUser.token}` },
           params: { ids: updatedCategory.courses },
         })
@@ -31,7 +31,7 @@ const CoursesPage = () => {
         });
     }
     axios
-      .get(`http://localhost:5000/api/course/thisgetcourses`, {
+      .get(`https://onelogica-backend.vercel.app/api/course/thisgetcourses`, {
         headers: { Authorization: `Bearer ${currentUser.token}` },
         params: { ids: currentUser.courses },
       })
@@ -51,7 +51,7 @@ const CoursesPage = () => {
       setCurrentUser(userData.data);
       if (categoryData) {
         axios
-          .get(`http://localhost:5000/api/course/category/get/${categoryData.slug}`, {
+          .get(`https://onelogica-backend.vercel.app/api/course/category/get/${categoryData.slug}`, {
             headers: { Authorization: `Bearer ${userData.data.token}` },
           })
           .then((response) => {

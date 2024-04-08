@@ -23,7 +23,7 @@ const CourseCard = ({ course }) => {
     if (userData) {
       setCurrentUser(userData.data);
       axios
-        .get(`http://localhost:5000/api/user/getuser/${course.teacher}`, {
+        .get(`https://onelogica-backend.vercel.app/api/user/getuser/${course.teacher}`, {
           headers: { Authorization: `Bearer ${userData.data.token}` },
         })
         .then((response) => {
@@ -35,7 +35,7 @@ const CourseCard = ({ course }) => {
   const handleEnroll = (id) => {
     console.log(currentUser.token);
     axios
-      .post(`http://localhost:5000/api/course/enroll/${id}`, null, {
+      .post(`https://onelogica-backend.vercel.app/api/course/enroll/${id}`, null, {
         headers: { Authorization: `Bearer ${currentUser.token}` },
       })
       .then((response) => {

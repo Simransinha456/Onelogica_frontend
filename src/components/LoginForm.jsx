@@ -40,7 +40,7 @@ const LoginForm = () => {
       console.log("Form submitted:", formData);
 
       try {
-        const userData = await axios.post(`http://localhost:5000/api/user/login`, {
+        const userData = await axios.post(`https://onelogica-backend.vercel.app/api/user/login`, {
           email: formData.email,
           password: formData.password,
         });

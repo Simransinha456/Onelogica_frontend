@@ -33,7 +33,7 @@ export const LessonPage = () => {
     if (userData) {
       setCurrentUser(userData.data);
       axios
-        .get(`http://localhost:5000/api/lesson/thisCourseLessons`, {
+        .get(`https://onelogica-backend.vercel.app/api/lesson/thisCourseLessons`, {
           headers: { Authorization: `Bearer ${userData.data.token}` },
           params: { id: courseData._id },
         })

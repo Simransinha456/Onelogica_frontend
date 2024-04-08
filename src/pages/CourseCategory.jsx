@@ -33,7 +33,7 @@ const CourseCategoryPage = () => {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:5000/api/course/category/delete/${id}`, {
+      .delete(`https://onelogica-backend.vercel.app/api/course/category/delete/${id}`, {
         headers: { Authorization: `Bearer ${currentUser.token}` },
       })
       .then((response) => {
@@ -49,7 +49,7 @@ const CourseCategoryPage = () => {
     const userData = JSON.parse(localStorage.getItem(process.env.USER_LOCALSTORAGE_KEY));
     console.log(userData.data);
     axios
-      .get("http://localhost:5000/api/course/category/getall", {
+      .get("https://onelogica-backend.vercel.app/api/course/category/getall", {
         headers: { Authorization: `Bearer ${userData.data.token}` },
       })
       .then((response) => {

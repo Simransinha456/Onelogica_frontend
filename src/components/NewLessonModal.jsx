@@ -30,7 +30,7 @@ const NewLessonModal = ({ onClose, course, currentUser }) => {
     try {
       const userData = await JSON.parse(localStorage.getItem(process.env.USER_LOCALSTORAGE_KEY));
       const response = await axios.post(
-        `http://localhost:5000/api/lesson/createlesson/${course._id}`,
+        `https://onelogica-backend.vercel.app/api/lesson/createlesson/${course._id}`,
         {
           title,
           video,

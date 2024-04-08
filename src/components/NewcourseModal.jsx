@@ -28,7 +28,7 @@ const NewCourseModal = ({ onClose, category }) => {
       const userData = await JSON.parse(localStorage.getItem(process.env.USER_LOCALSTORAGE_KEY));
       const currentUser = userData.data;
       const response = await axios.post(
-        `http://localhost:5000/api/course/createcourse/${category}`,
+        `https://onelogica-backend.vercel.app/api/course/createcourse/${category}`,
         {
           title,
           description,

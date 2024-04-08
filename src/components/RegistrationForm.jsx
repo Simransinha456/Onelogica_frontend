@@ -78,7 +78,7 @@ const RegistrationForm = () => {
 
     try {
       const userData = await axios.post(
-        `http://localhost:5000/api/user/register`,
+        `https://onelogica-backend.vercel.app/api/user/register`,
         {
           name: formData.name,
           email: formData.email,

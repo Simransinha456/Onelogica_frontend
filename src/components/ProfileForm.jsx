@@ -33,7 +33,7 @@ const ProfileForm = () => {
 
   const updateUserProfile = (userData) => {
     axios
-      .put("http://localhost:5000/api/user/updateprofile", userData, {
+      .put("https://onelogica-backend.vercel.app/api/user/updateprofile", userData, {
         headers: { Authorization: `Bearer ${userData.token}` },
       })
       .then((response) => {
